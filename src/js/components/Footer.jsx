@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = ({ taskCount }) => {
   return (
-    <p className="text-muted mb-2 text-center mgitt-3">
+    <p className="text-body-secondarygit sta">
       {taskCount} {taskCount <= 1 ? "item left" : "items left"}
     </p>
   );
