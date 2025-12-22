@@ -15,8 +15,8 @@ const TaskList = ({ tasks, deleteTask, taskCount }) => {
           key={i}
           className="task-box list-group-item d-flex justify-content-between align-items-center"
         >
-          {task}
-          <DeleteButton onClick={() => deleteTask(i)} />
+          {task.label}
+          <DeleteButton onClick={() => deleteTask(tasks, task.label)} />
         </li>
       ))}
     </ul>

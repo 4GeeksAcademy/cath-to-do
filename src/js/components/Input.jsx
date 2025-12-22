@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 
-const Input = ({ tasks, setTasks }) => {
+const Input = ({ addTask }) => {
   const [input, setInput] = useState("");
 
   const handleKeyDown = (event) => {
     if ((event.key === "Enter") & (input != "")) {
-      console.log("Enter is pressed");
-      setTasks([...tasks, input]);
+      console.log("Enter is pressed, adding a task");
+      const newTask = {
+        label: input,
+        is_done: false,
+      };
+      console.log(`Add new task: ${newTask.label}`);
+      addTask(newTask);
+
       setInput("");
     }
   };
-
-  console.log(tasks);
 
   return (
     <input
